@@ -52,17 +52,14 @@ Chinese community edition of [agency-agents](https://github.com/msitarzewski/age
 
 ### 🔥 OpenClaw 用户快速上手
 
-[OpenClaw](https://openclaw.com) 是目前最火的多智能体平台，本项目完整支持：
+OpenClaw 需要先转换格式再安装（上方方式一仅安装，这里是完整两步）：
 
 ```bash
-# 一键转换为 OpenClaw 格式（SOUL.md + AGENTS.md）
-./scripts/convert.sh --tool openclaw
-
-# 安装到 OpenClaw
-./scripts/install.sh --tool openclaw
+./scripts/convert.sh --tool openclaw   # 第一步：转换为 SOUL.md 格式
+./scripts/install.sh --tool openclaw   # 第二步：安装到 ~/.openclaw/
 ```
 
-安装后每个智能体会生成 `SOUL.md`（身份人设）+ `AGENTS.md`（业务能力）+ `IDENTITY.md`（简介），直接在 OpenClaw 中使用。
+每个智能体会生成三个文件：`SOUL.md`（身份人设）+ `AGENTS.md`（业务能力）+ `IDENTITY.md`（简介），支持多智能体协作编排。
 
 ### 方式二：手动复制
 
