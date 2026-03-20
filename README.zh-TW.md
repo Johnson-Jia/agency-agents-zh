@@ -563,13 +563,36 @@ cd /your/project
 <details>
 <summary><strong>Cursor</strong></summary>
 
-轉換為 Cursor rule 檔案並安裝到專案目錄 `.cursor/rules/`。
+轉換為 Cursor rule 檔案（`.mdc`）並安裝到專案目錄 `.cursor/rules/`。
 
+**安裝：**
 ```bash
 ./scripts/convert.sh --tool cursor
 cd /your/project
 /path/to/agency-agents-zh/scripts/install.sh --tool cursor
 ```
+
+**安裝後如何使用：**
+
+1. 開啟 Cursor，確認專案根目錄有 `.cursor/rules/` 且包含 `.mdc` 檔案
+2. 進入 **Cursor Settings**（`Cmd+,` / `Ctrl+,`）→ **Rules** → **Project Rules**
+3. 你會看到所有已安裝的智能體規則，預設為未啟用狀態
+4. **啟用你需要的智能體**（建議按需啟用，不要全部開啟以避免上下文過長）
+5. 啟用後，在 Cursor Chat 或 Composer 中智能體規則會自動生效
+
+**使用範例：**
+```
+# 在 Cursor Chat 中直接對話，已啟用的規則會自動影響回答
+幫我審查這個元件的效能問題
+
+# 或在 Composer 中引用特定規則
+@rules 使用前端開發者的標準來重構這段程式碼
+```
+
+> **常見問題**：如果在 Cursor 中看不到規則，請確認：
+> - `.cursor/rules/` 目錄在專案根目錄下（不是全域目錄）
+> - 檔案副檔名是 `.mdc`（不是 `.md`）
+> - 已重新開啟專案或重新啟動 Cursor
 </details>
 
 <details>
